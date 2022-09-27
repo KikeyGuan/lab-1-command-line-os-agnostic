@@ -18,6 +18,10 @@ Copy and paste the output of ls below.
 ----------
 Code  Desktop  Documents  Downloads  Movies  Music  Pictures  textfile.txt
 
+LICENSE.txt        cmd/  git-bash.exe*  proc/         unins000.exe*
+ReleaseNotes.html  dev/  git-cmd.exe*   tmp/          unins000.msg
+bin/               etc/  mingw64/       unins000.dat  usr/
+
 
 ==========
 2a. Type: 
@@ -28,18 +32,24 @@ What happens?  Describe it below.
 ----------
 Desktop/    Documents/  Downloads/
 
+changes to dev/
 
 ==========
 2b. Press <TAB> one more time.  Copy and paste the output below.
 ----------
 rdrgeerwtger yg erwy brg
 
+dev/
+
 
 ==========
 2c. Now press <ENTER>. Copy and paste the output below.
 ----------
 
-
+clipboard  dsp      null    scd0  sda3  shm/     stdout@  zero
+conin      fd@      ptmx    sda   sda4  sr0      tty
+conout     full     pty0    sda1  sda5  stderr@  urandom
+console    mqueue/  random  sda2  sda6  stdin@   windows
 
 ==========
 3.  Type:
@@ -49,6 +59,7 @@ $ ls -l Documents<ENTER>
 Copy and paste the first *two lines* of output below.
 ----------
 
+ls: cannot access 'Documents': No such file or directory
 
 
 ==========
@@ -59,6 +70,7 @@ $ ls -a Documents
 Copy and paste the first *two lines* of output below.
 ----------
 
+ls: cannot access 'Documents': No such file or directory
 
 
 ==========
@@ -69,7 +81,7 @@ Copy and paste the first *two lines* of output below.
 What command was repeated?
 ----------
 
-
+bash: syntax error near unexpected token `<'
 
 ==========
 6.  Type:
@@ -79,6 +91,7 @@ What command was repeated?
 What command was repeated?
 ----------
 
+bash: syntax error near unexpected token `<'
 
 
 ==========
@@ -89,6 +102,11 @@ $ ls /b<TAB><ENTER>
 What is the result of pressing tab?
 ----------
 
+this shows up:
+LICENSE.txt        dev/               mingw64/           unins000.exe
+ReleaseNotes.html  etc/               proc/              unins000.msg
+bin/               git-bash.exe       tmp/               usr/
+cmd/               git-cmd.exe        unins000.dat
 
 
 ==========
@@ -99,37 +117,37 @@ $ ls doesnotexist
 Copy and paste the output below.
 ----------
 
-
+ls: cannot access 'doesnotexist': No such file or directory
 
 ==========
 9.  What key do I press to go to the previous command?
 ----------
 
-
+up arrowkey to see history of commands
 
 ==========
 10.  Name two flags that we used in this exercise.
 ----------
 
-
+-l (list) and -a (all)
 
 ==========
 11.  What key do I use to attempt to autocomplete a command or a file name?
 ----------
 
-
+TAB
 
 ==========
 12.  What was the main command that we used throughout this exercise?
 ----------
 
-
+-ls
 
 ==========
 13.  Name one argument that we passed to the command.
 ----------
 
-
+ls doesnotexist
 
 ==========
 14.  Type:
@@ -139,6 +157,7 @@ $ foo<ENTER>
 Copy and paste the output below.
 ----------
 
+bash: syntax error near unexpected token `newline'
 
 
 ==========
@@ -149,7 +168,7 @@ Copy and paste the output below.
 Copy and paste the output below.
 ----------
 
-
+bash: syntax error near unexpected token `<'
 
 ==========
 16.  In the following line....
@@ -158,3 +177,4 @@ $ ls -a Desktop
 
 What is the command, flag, argument, and prompt?
 ----------
+command is ls, flag is -a, argument is Desktop, prompt is $
